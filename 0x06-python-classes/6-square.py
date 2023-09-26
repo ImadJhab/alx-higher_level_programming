@@ -4,11 +4,12 @@
 
 class Square:
     """Square class"""
-    def __init__(self, size=0):
-        """nitialize a new instence of square
+    def __init__(self, size=0, position=(0, 0)):
+        """initialize a new instence of square
         args:
         size(int): size of the new square"""
         self.__size = size
+        self.position = position
 
     @property
     def size(self):
