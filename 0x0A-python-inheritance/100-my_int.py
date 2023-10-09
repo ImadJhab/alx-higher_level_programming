@@ -7,10 +7,10 @@ class MyInt(int):
     def __new__(cls, *args, **kwargs):
         return super(MyInt, cls).__new__(cls, *args, **kwargs)
 
-    def __equal__(self, other):
+    def __eq__(self, other):
         """!= is now =="""
         return int(self) != other
 
-    def __negative__(self, other):
+    def __ne__(self, other):
         """== is now !="""
         return int(self) == other
