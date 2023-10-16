@@ -1,8 +1,8 @@
 #!/usr/bin/python3
+"""base model class"""
 import csv
 import json
 import turtle
-"""base model class"""
 
 
 class Base:
