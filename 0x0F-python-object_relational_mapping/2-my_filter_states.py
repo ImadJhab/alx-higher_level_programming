@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""importing models"""
 
 import MySQLdb
 from sys import argv
