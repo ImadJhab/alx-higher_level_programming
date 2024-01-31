@@ -1,12 +1,18 @@
 #!/usr/bin/node
 
-const fv = require('fv');
-const file = process.argv[2];
+const fs = require('fs');
 
-fv.readFile(file, 'utf8', function (err, data) {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(data);
-  }
-});
+const filePath = process.argv[2];
+
+if (!filePath) {
+  process.exitCode = 1;
+} else {
+  fs.readFile(filePath, 'utf-8', (err, data) => {
+    if (err) {
+      process.exitCode = 1;
+      process.stdout.write(`${err}`);
+    } else {
+      process.stdout.write(`${data}`);
+    }
+  });
+}
